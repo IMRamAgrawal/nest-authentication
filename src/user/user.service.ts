@@ -6,7 +6,7 @@ export class UserService {
   constructor(private prisma: PrismaService) {}
 
   async getProfile(userId: string) {
-    console.log("getProf ", userId)
+    
     return this.prisma.user.findUnique({ where: { id: userId } });
   }
 
